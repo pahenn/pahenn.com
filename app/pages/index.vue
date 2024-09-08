@@ -12,14 +12,18 @@
     >
       <div class="flex flex-col">
         <NuxtLink
-          v-for="entry in list.sort((a, b) => b.date.localeCompare(a.date))"
+          v-for="entry in list
+            .filter((entry) => entry.date)
+            .sort((a, b) => b.date.localeCompare(a.date))"
           :key="`${entry.date}-${entry._path}`"
           class="flex justify-between items-baseline hover:bg-gray-100 p-2 rounded-md"
           :to="`${entry._path}`"
         >
           <div class="flex items-baseline flex-row space-x-4">
-            <h2 class="text-lg align-text-bottom">{{ entry.title }}</h2>
-            <p class="text-xs font-light align-text-bottom">
+            <h2 class="text-sm md:text-lg align-text-bottom">
+              {{ entry.title }}
+            </h2>
+            <p class="hidden md:block text-xs font-light align-text-bottom">
               {{ entry.subtitle }}
             </p>
           </div>
