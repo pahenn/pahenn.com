@@ -3,8 +3,10 @@ title: Why a blog?
 subtitle: People may want to listen I suppose
 description: First post
 date: 2024-09-06
+tags: null
 ---
-Some of the most common advice I hear in around the 
+
+Some of the most common advice I hear in around the
 
 ## Who am I
 
@@ -17,4 +19,3 @@ Tech and business
 ## Why should you read what I'm writing
 
 I'm pretty good at what I do
-

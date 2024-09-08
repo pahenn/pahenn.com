@@ -9,6 +9,18 @@
           <ul class="flex space-x-4 items-center justify-center">
             <li>
               <NuxtLink
+                to="https://github.com/pahenn"
+                target="_blank"
+                external
+              >
+                <Icon
+                  name="bxl:github"
+                  class="size-6 m-auto"
+                />
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
                 to="https://www.linkedin.com/in/hennesseypatrick/"
                 target="_blank"
                 external
