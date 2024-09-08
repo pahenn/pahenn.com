@@ -18,10 +18,12 @@
           :to="`${entry._path}`"
         >
           <div class="flex items-baseline flex-row space-x-4">
-            <h2 class="text-xl">{{ entry.title }}</h2>
-            <p class="text-sm font-light">{{ entry.subtitle }}</p>
+            <h2 class="text-lg align-text-bottom">{{ entry.title }}</h2>
+            <p class="text-xs font-light align-text-bottom">
+              {{ entry.subtitle }}
+            </p>
           </div>
-          <p>
+          <p class="text-xs font-light align-text-bottom">
             {{
               format({
                 date: parse(entry.date, "YYYY-MM-DD", "en-US"),
