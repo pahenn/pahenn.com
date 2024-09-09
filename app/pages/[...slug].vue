@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full max-w-4xl">
+  <div class="flex flex-col w-full items-center max-w-4xl">
     <ContentDoc>
       <template v-slot="{ doc }">
         <article class="flex flex-col gap-4">

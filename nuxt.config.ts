@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/fonts",
     "@nuxthub/core",
+    "@nuxt/image",
   ],
 
   future: {

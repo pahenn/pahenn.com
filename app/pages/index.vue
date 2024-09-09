@@ -1,10 +1,20 @@
 <script lang="ts" setup>
   import { format, parse } from "@formkit/tempo"
+
+  const intro = [
+    "Some thoughts on work and life mixed in with some code. \
+    ",
+  ]
 </script>
 <template>
   <main class="flex flex-col w-full max-w-3xl">
     <div class="mb-16 p-2">
-      <p>Just some thoughts</p>
+      <p
+        v-for="line in intro"
+        class="max-w-md"
+      >
+        {{ line }}
+      </p>
     </div>
     <ContentList
       path="/"
