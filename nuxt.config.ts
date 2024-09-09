@@ -16,8 +16,8 @@ export default defineNuxtConfig({
   },
 
   umami: {
-    id: "0e40aaed-b9c3-49c0-90ad-31aa1700d062",
-    host: "https://pahenn.com",
+    id: "",
+    host: "",
     autoTrack: true,
   },
 
