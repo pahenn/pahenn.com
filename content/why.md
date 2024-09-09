@@ -5,6 +5,7 @@ description: First post
 date: 2024-09-09
 tags:
   - blog
+  - me
 ---
 
 Some advice that is gets parroted by most of the tech influence world is that blogging and writing down your thoughts is a great way not only to start to build an audience, but to find potential new job opportunities and also sharpen your own skills by forcing you to think through how you would communicate a technique or idea.
