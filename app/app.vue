@@ -3,6 +3,7 @@
 
   useHead(() => ({
     title: route.path === "/" ? "pahenn.com" : undefined,
+    description: "pahenn.com",
     link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
   }))
 </script>
