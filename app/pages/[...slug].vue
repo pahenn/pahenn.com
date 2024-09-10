@@ -28,7 +28,7 @@
           <div class="w-full border-b border-gray-200"></div>
           <ContentRenderer
             :value="doc"
-            class="prose"
+            class="prose-lg"
           />
         </article>
       </template>
