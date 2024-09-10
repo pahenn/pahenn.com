@@ -18,7 +18,9 @@
 </script>
 
 <template>
-  <div class="flex flex-col h-screen items-center bg-bone-50 overflow-y-scroll">
+  <div
+    class="flex flex-col h-screen pb-48 items-center bg-bone-50 overflow-y-scroll"
+  >
     <div class="flex flex-col w-full px-4">
       <Header
         :menuItems="menuItems"

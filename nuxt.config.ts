@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-
+  extends: ["@nuxt/ui-pro"],
   modules: [
     "@nuxt/ui",
     "@nuxt/content",
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     "components:extend": (components) => {
       const globals = components.filter((c) =>
-        ["UButton", "UCarousel"].includes(c.pascalName)
+        ["UButton", "UCallout", "UAlert"].includes(c.pascalName)
       )
 
       globals.forEach((c) => (c.global = true))
