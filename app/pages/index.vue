@@ -26,7 +26,7 @@
             .filter((entry) => entry.date)
             .sort((a, b) => b.date.localeCompare(a.date))"
           :key="`${entry.date}-${entry._path}`"
-          class="flex justify-between items-baseline hover:bg-gray-100 p-2 rounded-md"
+          class="flex justify-between items-baseline hover:bg-gray-200 p-2 rounded-md"
           :to="`${entry._path}`"
         >
           <div class="flex items-baseline flex-row space-x-4">
