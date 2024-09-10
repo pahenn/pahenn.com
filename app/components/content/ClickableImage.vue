@@ -55,12 +55,13 @@
             <div
               class="w-full h-full bg-center bg-no-repeat bg-contain"
               :style="imageStyle"
-            ></div>
-            <div
-              v-if="caption"
-              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4"
             >
-              <p class="text-sm">{{ caption }}</p>
+              <div
+                v-if="caption"
+                class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4"
+              >
+                <p class="text-sm">{{ caption }}</p>
+              </div>
             </div>
           </div>
         </div>
