@@ -22,6 +22,12 @@ export default defineNuxtConfig({
     ignoreLocalhost: true,
   },
 
+  image: {
+    cloudflare: {
+      baseURL: "https://r2.pahenn.com",
+    },
+  },
+
   compatibilityDate: "2024-09-06",
 
   hooks: {

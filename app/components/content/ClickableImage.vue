@@ -1,6 +1,4 @@
 <script setup lang="ts">
-  import { ref, computed } from "vue"
-
   interface ImageProps {
     src: string
     alt: string
@@ -10,30 +8,44 @@
   const props = defineProps<ImageProps>()
 
   const isModalOpen = ref(false)
+  const imageRef = ref<HTMLImageElement | null>(null)
+  const captionRef = ref<HTMLDivElement | null>(null)
 
   function toggleModal() {
     isModalOpen.value = !isModalOpen.value
+    if (isModalOpen.value) {
+      nextTick(() => {
+        adjustCaptionWidth()
+      })
+    }
   }
 
-  const imageStyle = computed(() => ({
-    backgroundImage: `url(${props.src})`,
-  }))
+  function adjustCaptionWidth() {
+    if (imageRef.value && captionRef.value) {
+      captionRef.value.style.width = `${imageRef.value.offsetWidth}px`
+    }
+  }
+
+  onMounted(() => {
+    window.addEventListener("resize", adjustCaptionWidth)
+  })
 </script>
 
 <template>
   <div>
     <div
       @click="toggleModal"
-      class="cursor-pointer"
+      class="cursor-pointer flex flex-col items-center justify-center"
     >
-      <img
+      <NuxtImg
+        provider="cloudflare"
         :src="src"
         :alt="alt"
         class="w-full h-auto"
       />
       <p
         v-if="caption"
-        class="text-sm text-gray-600 mt-2"
+        class="text-sm text-center my-auto font-semibold prose text-gray-600"
       >
         {{ caption }}
       </p>
@@ -51,14 +63,22 @@
           >
             <UIcon name="i-heroicons-x-mark-20-solid" />
           </button>
-          <div class="relative w-full h-full">
-            <div
-              class="w-full h-full bg-center bg-no-repeat bg-contain"
-              :style="imageStyle"
-            >
+          <div
+            class="relative w-full h-full flex flex-col items-center justify-center"
+          >
+            <div class="flex flex-col items-center">
+              <NuxtImg
+                ref="imageRef"
+                provider="cloudflare"
+                :src="src"
+                :alt="alt"
+                class="max-w-full max-h-[80vh] object-contain"
+                @load="adjustCaptionWidth"
+              />
               <div
                 v-if="caption"
-                class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4"
+                ref="captionRef"
+                class="mt-4 text-white p-4 text-center"
               >
                 <p class="text-sm">{{ caption }}</p>
               </div>

@@ -40,4 +40,6 @@ This may seem like low numbers, but anyone delivering data technology to custome
 
 So I'll be writing about a data-forward way of delivering tools and applications, and discuss tech I think is important along the way. I hope you'll stick around and read once in a while.
 
+
+
 Patrick
