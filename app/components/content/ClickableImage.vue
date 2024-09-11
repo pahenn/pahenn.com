@@ -55,14 +55,9 @@
       <div
         v-if="isModalOpen"
         class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
+        @click="toggleModal"
       >
         <div class="relative w-[90vw] h-[90vh]">
-          <button
-            @click="toggleModal"
-            class="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2 z-10"
-          >
-            <UIcon name="i-heroicons-x-mark-20-solid" />
-          </button>
           <div
             class="relative w-full h-full flex flex-col items-center justify-center"
           >
