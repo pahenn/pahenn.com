@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     host: "",
     autoTrack: true,
     ignoreLocalhost: true,
+    useDirective: true,
   },
 
   image: {
