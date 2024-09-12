@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <header class="flex justify-between items-baseline py-2 w-full">
+  <header class="flex justify-between py-2 w-full">
     <div class="flex md:space-x-4 items-center justify-center">
       <NuxtLink
         class="px-2 min-w-8 rounded-md text-center"
@@ -35,8 +35,8 @@
         </template>
       </div>
     </div>
-    <nav>
-      <ul class="flex space-x-4 items-center justify-center">
+    <nav class="flex items-center justify-center">
+      <ul class="flex space-x-4">
         <template
           v-for="item in socialLinks"
           :key="item.label"
@@ -47,10 +47,11 @@
               target="_blank"
               v-umami="`social-${item.label}`"
               external
+              class="flex items-center justify-center"
             >
               <Icon
                 :name="item.icon"
-                class="size-6 m-auto"
+                class="size-6"
               />
             </NuxtLink>
           </li>
