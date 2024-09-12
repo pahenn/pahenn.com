@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   defineProps<{
     menuItems: { label: string; to: string }[]
-    externalLinks: { icon: string; to: string }[]
+    socialLinks: { icon: string; to: string; label: string }[]
   }>()
 </script>
 
@@ -38,13 +38,14 @@
     <nav>
       <ul class="flex space-x-4 items-center justify-center">
         <template
-          v-for="item in externalLinks"
+          v-for="item in socialLinks"
           :key="item.label"
         >
           <li>
             <NuxtLink
               :to="item.to"
               target="_blank"
+              v-umami="`social-${item.label}`"
               external
             >
               <Icon

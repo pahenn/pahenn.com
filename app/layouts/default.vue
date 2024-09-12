@@ -1,18 +1,21 @@
 <script setup lang="ts">
   const menuItems: { label: string; to: string }[] = []
 
-  const externalLinks = [
+  const socialLinks = [
     {
       icon: "bxl:github",
       to: "https://github.com/pahenn",
+      label: "GitHub",
     },
     {
       icon: "bxl:linkedin",
       to: "https://www.linkedin.com/in/hennesseypatrick/",
+      label: "LinkedIn",
     },
     {
       icon: "bxl:twitter",
       to: "https://x.com/pahennessey",
+      label: "X",
     },
   ]
 </script>
@@ -22,7 +25,7 @@
     <div class="flex flex-col w-full px-4">
       <Header
         :menuItems="menuItems"
-        :externalLinks="externalLinks"
+        :socialLinks="socialLinks"
       />
     </div>
     <div class="w-full border-b border-gray-300"></div>

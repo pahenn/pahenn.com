@@ -13,6 +13,7 @@
   <NuxtLink
     :to="href"
     :target="target"
+    v-umami="`inline-link-${href}`"
     class="text-primary-600 hover:text-primary-800 underline inline-flex items-center"
   >
     <slot />

@@ -49,7 +49,7 @@
   <div>
     <div
       @click="toggleModal"
-      v-umami="{ name: 'Click Image', url: src }"
+      v-umami="`image-${src}`"
       class="cursor-pointer flex flex-col items-center justify-center"
     >
       <NuxtImg
