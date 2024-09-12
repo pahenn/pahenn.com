@@ -28,6 +28,20 @@
 
   onMounted(() => {
     window.addEventListener("resize", adjustCaptionWidth)
+    window.addEventListener("keyup", (event) => {
+      if (event.key === "Escape" && isModalOpen.value) {
+        toggleModal()
+      }
+    })
+  })
+
+  onUnmounted(() => {
+    window.removeEventListener("resize", adjustCaptionWidth)
+    window.removeEventListener("keyup", (event) => {
+      if (event.key === "Escape" && isModalOpen.value) {
+        toggleModal()
+      }
+    })
   })
 </script>
 
