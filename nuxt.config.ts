@@ -29,6 +29,10 @@ export default defineNuxtConfig({
     },
   },
 
+  colorMode: {
+    preference: "light",
+  },
+
   compatibilityDate: "2024-09-06",
 
   hooks: {
