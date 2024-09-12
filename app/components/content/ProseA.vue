@@ -20,7 +20,7 @@
     <Icon
       v-if="openInNewTab"
       name="tabler:external-link"
-      class="size-4 mb-1 ml-0.5"
+      class="size-4 mt-1 ml-0.5"
       aria-hidden="true"
     />
   </NuxtLink>
