@@ -13,13 +13,13 @@ I was invited onto a podcast recently, and preparing for it got me to put some t
 
 ## What does "shift left" mean
 
-**Shift left** is simply a term I heard sometime in the past year to refer to thinking about analytics earlier in the process of application development. I think the first person I heard it from was [Joe Reis](https://www.linkedin.com/in/josephreis){target="_blank"} during a call I was on with he and [Bill Inmon](https://www.linkedin.com/in/billinmon){target="_blank"}. **Moving upstream** and **designing with the end in mind** are other ways I've used to describe this before, but this term is as good as any. Left and right are in used in relation to a timeline that begins with data creation, and moves to the right as you get further away from this point. It's simplest to think about in terms of time, but actually makes more sense to think about moving right as gaining complexity.
+**Shift left** is simply a term I heard sometime in the past year to refer to thinking about analytics earlier in the process of application development. I think the first person I heard it from was [Joe Reis](https://www.linkedin.com/in/josephreis){target="_blank"} during a call I was on with he and [Bill Inmon](https://www.linkedin.com/in/billinmon){target="_blank"}. **Moving upstream** and **designing with the end in mind** are other ways I've used to describe this before, but this term is as good as any. Left and right are used in relation to a timeline that begins with data creation, and moves to the right as you get further away from this point. It's simplest to think about in terms of time, but actually makes more sense to think about moving right as gaining complexity.
 ::clickable-image
 ---
 
 src: images/shift-left/shift-left.png
 alt: Timeline
-caption: Analytics as a function of time, complexity, and sanity. Choose the representation that works best for what you're oprimizing for
+caption: Analytics as a function of time, complexity, and sanity. Choose the representation that works best for what you're optimizing for
 ---
 ::
 Up until relatively recently, it wasn't common place to build bespoke software for your business. Commercial software was bought for a specific use case and configured for your business as best as possible. It might not be a perfect fit, but you would get it close enough. Another area of the business would do the same: find the right piece of software for their use case, and make it work as best as possible.
@@ -35,7 +35,7 @@ alt: Tradition data warehouse integration
 caption: Simplified enterprise data warehouse.
 ---
 ::
- With transformations defined before data is viewed by analysts, consistent data is prepared for business use without intervention. Sounds like a perfect outcome. Except data isn't always consistent. And every step to the right adds another failure point. And need for orchestration and coordination. But it's still none of these issues that cause me to take pause when I hear startups needing [analytics engineering](https://www.getdbt.com/what-is-analytics-engineering){target="_blank"} for their own data sources.
+ With transformations defined before data is viewed by analysts, consistent data is prepared for business use without intervention. Sounds like a perfect outcome. Except data isn't always consistent. And every step to the right adds another failure point. And the need for orchestration and coordination. But it's still none of these issues that cause me to take pause when I hear startups needing [analytics engineering](https://www.getdbt.com/what-is-analytics-engineering){target="_blank"} for their own data sources.
 
 For me, the problem only arises here when we start introducing a requirement of the full data warehouse pipeline for custom business software. That is, we made the software, we own all aspects of its implementation, and *we still don't get to have low-complexity analytics*. I have seen time and time again where organizations are opting in to complexity down the road rather than making good design decisions up front, or being willing to have an engineering culture that embraces an evolving system. I have even been a participant in enabling engineering teams to eschew quality data models up front with the promise of the data team able to play hero. I know first hand how far off the deep end this can lead a technology organization.
 ::clickable-image
