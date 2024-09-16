@@ -4,8 +4,9 @@
     alt: string
     caption?: string
   }
-
   const props = defineProps<ImageProps>()
+
+  const eventName = `clickable-image|>${props.src}`
 
   const isModalOpen = ref(false)
   const imageRef = ref<HTMLImageElement | null>(null)
@@ -49,7 +50,7 @@
   <div>
     <div
       @click="toggleModal"
-      v-umami="`image-${src}`"
+      v-umami="eventName"
       class="cursor-pointer flex flex-col items-center justify-center"
     >
       <NuxtImg

@@ -42,18 +42,10 @@
           :key="item.label"
         >
           <li>
-            <NuxtLink
+            <SocialIconLink
               :to="item.to"
-              target="_blank"
-              v-umami="`social-${item.label}`"
-              external
-              class="flex items-center justify-center"
-            >
-              <Icon
-                :name="item.icon"
-                class="size-6"
-              />
-            </NuxtLink>
+              :icon="item.icon"
+            />
           </li>
         </template>
       </ul>
