@@ -5,11 +5,12 @@
   }
   const props = defineProps<Props>()
 
-  const eventName = `inline link`
   const eventData = {
-    name: eventName,
-    href: props.href,
-    type: "click",
+    name: `inline link|>${props.href}`,
+    event_type: "click",
+    object_type: "link",
+    object_subtype: "inline link",
+    meta: props,
   }
 
   const openInNewTab = computed(() => props.target === "_blank")

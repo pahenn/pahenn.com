@@ -6,12 +6,12 @@
   }
   const props = defineProps<ImageProps>()
 
-  const eventName = `lightbox image`
   const eventData = {
-    name: eventName,
-    src: props.src,
-    caption: props.caption,
-    type: "click",
+    name: `lightbox image|>${props.alt}`,
+    event_type: "click",
+    object_type: "image",
+    object_subtype: "lightbox image",
+    meta: props,
   }
 
   const isModalOpen = ref(false)

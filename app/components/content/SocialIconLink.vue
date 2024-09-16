@@ -5,11 +5,12 @@
   }
   const props = defineProps<Props>()
 
-  const eventName = `social link`
   const eventData = {
-    name: eventName,
-    href: props.to,
-    type: "click",
+    name: `social link|>${props.to}`,
+    event_type: "click",
+    object_type: "link",
+    object_subtype: "social link",
+    meta: props,
   }
 </script>
 
