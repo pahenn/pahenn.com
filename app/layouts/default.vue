@@ -3,17 +3,17 @@
 
   const socialLinks = [
     {
-      icon: "bxl:github",
+      icon: "prime:github",
       to: "https://github.com/pahenn",
       label: "GitHub",
     },
     {
-      icon: "bxl:linkedin",
+      icon: "prime:linkedin",
       to: "https://www.linkedin.com/in/hennesseypatrick/",
       label: "LinkedIn",
     },
     {
-      icon: "bxl:twitter",
+      icon: "prime:twitter",
       to: "https://x.com/pahennessey",
       label: "X",
     },
