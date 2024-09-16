@@ -5,14 +5,19 @@
   }
   const props = defineProps<Props>()
 
-  const eventName = `social-icon-link|>${props.to}`
+  const eventName = `social link`
+  const eventData = {
+    event: eventName,
+    href: props.to,
+    type: "click",
+  }
 </script>
 
 <template>
   <NuxtLink
     :to="props.to"
     target="_blank"
-    v-umami="eventName"
+    v-umami="eventData"
     external
     class="flex items-center justify-center"
   >

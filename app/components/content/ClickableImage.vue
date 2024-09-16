@@ -6,7 +6,13 @@
   }
   const props = defineProps<ImageProps>()
 
-  const eventName = `clickable-image|>${props.src}`
+  const eventName = `lightbox image`
+  const eventData = {
+    event: eventName,
+    src: props.src,
+    caption: props.caption,
+    type: "click",
+  }
 
   const isModalOpen = ref(false)
   const imageRef = ref<HTMLImageElement | null>(null)
@@ -50,7 +56,7 @@
   <div>
     <div
       @click="toggleModal"
-      v-umami="eventName"
+      v-umami="eventData"
       class="cursor-pointer flex flex-col items-center justify-center"
     >
       <NuxtImg

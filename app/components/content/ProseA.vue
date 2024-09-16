@@ -5,7 +5,12 @@
   }
   const props = defineProps<Props>()
 
-  const eventName = `inline-content-link|>${props.href}`
+  const eventName = `inline link`
+  const eventData = {
+    event: eventName,
+    href: props.href,
+    type: "click",
+  }
 
   const openInNewTab = computed(() => props.target === "_blank")
 </script>
@@ -14,7 +19,7 @@
   <NuxtLink
     :to="href"
     :target="target"
-    v-umami="eventName"
+    v-umami="eventData"
     class="text-primary-600 hover:text-primary-800 underline inline-flex items-center"
   >
     <slot />
