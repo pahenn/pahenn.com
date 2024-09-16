@@ -7,7 +7,7 @@
 
   const eventName = `inline link`
   const eventData = {
-    event: eventName,
+    name: eventName,
     href: props.href,
     type: "click",
   }

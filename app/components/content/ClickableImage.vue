@@ -8,7 +8,7 @@
 
   const eventName = `lightbox image`
   const eventData = {
-    event: eventName,
+    name: eventName,
     src: props.src,
     caption: props.caption,
     type: "click",

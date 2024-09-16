@@ -7,7 +7,7 @@
 
   const eventName = `social link`
   const eventData = {
-    event: eventName,
+    name: eventName,
     href: props.to,
     type: "click",
   }
