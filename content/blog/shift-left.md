@@ -1,7 +1,8 @@
 ---
 title: Shift Left
+type: blog
 subtitle: How I think about building
-description:
+description: 
 date: 2024-09-11
 tags:
   - data
