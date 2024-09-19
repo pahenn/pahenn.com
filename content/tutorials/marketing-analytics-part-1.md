@@ -3,7 +3,7 @@ title: Marketing Analytics - Part 1
 type: tutorial
 subtitle: Level up your growth marketing operation
 description: 
-date: 
+date: 2024-09-19
 tags:
   - analytics
   - data
@@ -37,18 +37,20 @@ Since I'm a big fan of [Nuxt] and the Nuxt UI team, I'm going to use their [temp
 
 Let's start by generating a new project from their template
 
-```zsh
-pnpx nuxi init marketing-analytics-tutorial -t github:nuxt-ui-pro/saas
+``` [add umami module]
+
+npx nuxi init marketing-analytics-tutorial -t github:nuxt-ui-pro/saas
+
 ```
 
 Once you follow the CLI instructions, you can navigate into that directory and test your project.
 
-```zsh
+```
 cd marketing-analytics-tutorial
 pnpm dev
 ```
 
-After navigating to http://localhost:3000/, you should see the the following screen (as of September 2024 at least)
+After navigating to `http://localhost:3000/`, you should see the the following screen (as of September 2024 at least)
 
 ::clickable-image
 ---
@@ -79,7 +81,7 @@ First, create a a new directory called `external-services` in your project direc
 
 Copy the following into `docker-compose.yml`
 
-```docker-compose.yml
+```yml [docker-compose.yml]
 services:
   umami:
     image: "ghcr.io/umami-software/umami:postgresql-latest"
@@ -136,7 +138,7 @@ volumes:
 
 and copy this into you `.env` file
 
-```.env
+```
 SERVICE_PASSWORD_64_UMAMI=umami_secret
 
 SERVICE_USER_POSTGRES=pahenn_tutorial_user
@@ -151,12 +153,12 @@ Feel free to change any credentials in here, and please do not use these in prod
 
 Open a new terminal and navigate to your `external-services` directory, and start your docker compose service stack
 
-```zsh
+```
 cd external-services
 docker compose up
 ```
 
-Now, test your Umami deployment at http://localhost.com:8080/. You should see the Umami login page.
+Now, test your Umami deployment at `http://localhost.com:8080/`. You should see the Umami login page.
 
 ::clickable-image
 ---
@@ -217,13 +219,13 @@ Next, we need our site to send event over to it. There is a Nuxt module for Umam
 
 From the console in your project, install the module.
 
-```zsh
+```
 npx nuxi@latest module add nuxt-umami@module
 ```
 
 And update your nuxt.config.ts. Add the Website ID you just copied to the `id` key, and the address for you Umami instance for host. If you're running this locally along side of me, the host will be `http://localhost:8080`.
 
-```nuxt.config.ts
+```
 export default defineNuxtConfig({
   modules: ['nuxt-umami'],
 
@@ -237,7 +239,7 @@ export default defineNuxtConfig({
 
 Since we've also set `autoTrack` to `true`, we are ready to measuring visitors on our site. Ensure that Umami. It may be necessary to recycle the SaaS Starter template that we started towards the beginning of this tutorial to pick up changes in your Nuxt config. Or if you've already stopped it, let's start it back up.
 
-```zsh
+```
 pnpm dev
 ```
 
@@ -269,7 +271,7 @@ Oftentimes you'll want to know what a user is doing on your site that isn't just
 
 Let's take on the example of knowing which page users are subscribing from. This is a real use-case for measuring the efficacy of your content marketing initiatives. First, we'll enable the `v-umami` directive for our Nuxt module. Add the `useDirective` key to `nuxt.config.ts`.
 
-```nuxt.config.ts
+```
   umami: {
     id: '555ee0f6-c974-4cc3-8862-b4dc337cc116',
     host: 'http://localhost:8080',

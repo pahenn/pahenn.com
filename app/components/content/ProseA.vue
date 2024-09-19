@@ -1,7 +1,7 @@
 <script setup lang="ts">
   interface Props {
     href: string
-    newTab: boolean
+    newTab?: string
   }
   const props = defineProps<Props>()
 
@@ -13,7 +13,7 @@
     meta: props,
   }
 
-  const openInNewTab = computed(() => props.newTab)
+  const openInNewTab = computed(() => props.newTab === "true")
 </script>
 
 <template>
@@ -21,7 +21,7 @@
     :to="href"
     :target="openInNewTab ? '_blank' : undefined"
     v-umami="eventData"
-    class="text-primary-600 hover:text-primary-800 underline inline-flex items-center"
+    class="text-primary-600 hover:text-primary-800 underline inline-flex items-center hover:no-underline"
   >
     <slot />
     <Icon

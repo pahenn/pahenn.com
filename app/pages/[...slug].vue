@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="w-full max-w-4xl px-4">
+  <div class="w-full max-w-4xl px-4 mx-auto">
     <ContentDoc>
       <template v-slot="{ doc }">
         <article class="flex flex-col gap-4">
@@ -17,7 +17,7 @@
               })
             }}
           </h3>
-          <div class="flex flex-row gap-2">
+          <div class="flex flex-row gap-2 flex-wrap">
             <h3
               v-for="tag in doc.tags"
               class="outline outline-gray-200 rounded-md px-3 py-1 text-sm bg-slate-200"
@@ -28,12 +28,12 @@
           <div class="w-full border-b border-gray-200"></div>
           <ContentRenderer
             :value="doc"
-            class="prose-lg"
+            class="prose prose-lg max-w-full"
           />
         </article>
       </template>
       <template #not-found>
-        <h1>Document not found</h1>
+        <h1 class="text-center">Document not found</h1>
       </template>
     </ContentDoc>
   </div>
