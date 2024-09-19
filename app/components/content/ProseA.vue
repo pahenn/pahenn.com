@@ -1,7 +1,7 @@
 <script setup lang="ts">
   interface Props {
     href: string
-    target?: string
+    newTab: boolean
   }
   const props = defineProps<Props>()
 
@@ -13,13 +13,13 @@
     meta: props,
   }
 
-  const openInNewTab = computed(() => props.target === "_blank")
+  const openInNewTab = computed(() => props.newTab)
 </script>
 
 <template>
   <NuxtLink
     :to="href"
-    :target="target"
+    :target="openInNewTab ? '_blank' : undefined"
     v-umami="eventData"
     class="text-primary-600 hover:text-primary-800 underline inline-flex items-center"
   >
