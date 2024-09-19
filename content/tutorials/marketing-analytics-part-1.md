@@ -3,7 +3,7 @@ title: Marketing Analytics - Part 1
 type: tutorial
 subtitle: Level up your growth marketing operation
 description: 
-date: 2024-09-19
+date: 
 tags:
   - analytics
   - data
