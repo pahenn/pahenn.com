@@ -14,16 +14,21 @@ tags:
   - metabase
   - oss
 ---
+::callout 
 
+This is the first part in a tutorial series to setup end-to-end marketing analytics with the goal of correlating top of funnel data with an on-going business operations funnel.
+
+::
 One thing I've come across lately in businesses in the disconnect between the marketing funnel and the rest of the business sales funnel. I've seen this not only in beginning stage start-ups (where you might imagine this would be easily occurring) but also at 7-figure solo-prenueur and SMBs, and even at late-stage unicorns. In fact, the smallest business are sometimes the best at maintaining this correlation as they manage the majority of their business in a single tool.
 
-Once a business grows, and there is turnover in consultant relationships, or heads of departments, or simply an easier tool to manage a specific layer of your process, the marketing funnel and sales funnel begin to drift. In this multi-part tutorial, we'll walk through 
+Once a business grows, and there is turnover in consultant relationships, or heads of departments, or simply an easier tool to manage a specific layer of your process, the marketing funnel and sales funnel begin to drift. Across this multi-part tutorial, we'll walk through 
 
  - Installing [Umami Analytics](https://umami.is/){newTab=true}, a lightweight web analytics, for tracking your inbound traffic
  - What UTM codes are and how to use them for understanding where traffic is coming from
  - Recording custom events on your site to understand how users are interacting with your content
  - Building custom dashboards in [Metabase](https://metabase.com/){newTab=true}, and open source analytics and dashboarding tool, allowing us to walk through getting the data out of Umami when we want to correlate it to other data in your ecosystem
  - And finally, associating a visitor with their purchase to be able to know not only what drives traffic, but what drives sales
+ - And probably more as topics arise while writing this...
 
 And what's better-yet, we'll do this all locally, so no new accounts need to be setup, no costs incurred, just pure and simple learning. Anything we talk about has a premium offering, and I encourage you to patronize these companies and use their cloud offerings. The fact that we're able to use the tools to teach like this is an incredible service they provide, an I applaud them for that.
 
