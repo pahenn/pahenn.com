@@ -1,5 +1,22 @@
 <script setup lang="ts">
-  const menuItems: { label: string; to: string }[] = []
+  const menuItems: { label: string; to: string }[] = [
+    // {
+    //   label: "home",
+    //   to: "/",
+    // },
+    // {
+    //   label: "about",
+    //   to: "/about",
+    // },
+    // {
+    //   label: "projects",
+    //   to: "/projects",
+    // },
+    // {
+    //   label: "contact",
+    //   to: "/contact",
+    // },
+  ]
 
   const socialLinks = [
     {
@@ -14,7 +31,7 @@
     },
     {
       icon: "prime:twitter",
-      to: "https://x.com/pahennessey",
+      to: "https://x.com/pahennxyz",
       label: "X",
     },
   ]

@@ -38,7 +38,7 @@ Umami provides even more features if you are looking for metrics like visitor re
 
 In order to walk through anything, I'll need a starter project to begin with. If you have a website already that you want to track and correlate marketing and sales analytics, I encourage you to follow along with your own site. 
 
-Since I'm a big fan of [Nuxt] and the Nuxt UI team, I'm going to use their [template for a SaaS](https://github.com/nuxt-ui-pro/saas){newTab=true} marketing site as my example. It gives us enough features already in their demo to cover our use cases. These templates are a premium feature of Nuxt UI, so you have to purchase a license to use it. I really like them, I recommend purchasing a license and supporting their work.
+Since I'm a big fan of Nuxt and the [Nuxt UI](https://ui.nuxt.xom){newTab=true} team, I'm going to use their [template for a SaaS](https://github.com/nuxt-ui-pro/saas){newTab=true} marketing site as my example. It gives us enough features already in their demo to cover our use cases. These templates are a premium feature of Nuxt UI, so you have to purchase a license to use it in production. I really like them, I recommend purchasing a license and supporting their work, and we can use them locally for this demo for free.
 
 Let's start by generating a new project from their template
 
