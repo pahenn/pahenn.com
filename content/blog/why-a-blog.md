@@ -3,7 +3,7 @@ title: Why a blog?
 type: blog
 subtitle: Time to finally get into this
 description: First post
-date: 2024-09-09
+date: 
 tags:
   - blog
   - me
